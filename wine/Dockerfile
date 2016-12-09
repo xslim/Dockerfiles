@@ -4,4 +4,6 @@ MAINTAINER Taras Kalapun <tkalapun@gmail.com>
 
 RUN apk --no-cache add wine
 
-ENTRYPOINT ["bash"]
+RUN ln -s /usr/bin/wine64 /usr/bin/wine
+
+ENTRYPOINT ["wine"]
